@@ -2,6 +2,7 @@ import pygame as pg
 from os import system
 from time import time
 from helpers.ezvector import *
+from helpers.math import *
 
 pg.init()
 

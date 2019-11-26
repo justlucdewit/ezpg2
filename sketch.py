@@ -3,11 +3,11 @@ from ezpg2 import *
 def setup():
     createCanvas(600, 600)
     consoleClear()
-    v1 = createVector(0, 30)
+    v1 = createVector(1, 30)
     v2 = v1.copy()
     v2.y = 20
-    print(v1.toString())
-    print(v2.toString())
+    v2.x = 0
+    print(dist(v1.x, v1.y, v2.x, v2.y))
 
 def draw():
     pass
