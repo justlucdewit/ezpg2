@@ -15,14 +15,17 @@ frameCountVar = 0               #holds number of passed frames
 xtranslation = 0                #x offset for drawing
 ytranslation = 0                #y offset for drawing
 frameCap = 60                   #capped framerate
+windowWidth = 0                 #width of the window
+windowHeight = 0                #height of the window
 
-def start(setupFunction, drawFunction):
+def start(setupFunction, df):
     setupFunction()
     while True:
-        drawFunction()
+        df()
         update()
 
 def update():
+    pg.display.flip()
     global frameCountVar
     frameCountVar += 1
     clock.tick(frameCap)
@@ -32,6 +35,10 @@ def update():
 
 def createCanvas(width, height):
     global canvas
+    global windowWidth
+    global windowHeight
+    windowWidth = width
+    windowHeight = height
     canvas = pg.display.set_mode((width, height))
     pg.display.set_caption("sketch")
 
@@ -50,3 +57,18 @@ def frameRate(fr=None):
 
 def consoleClear():
     system("cls")
+
+def background(r, g, b):
+	canvas.fill((constrain(r, 0, 255),constrain(g, 0, 255),constrain(b, 0, 255)))
+
+def mouseX():
+    return pg.mouse.get_pos()[0]
+
+def mouseY():
+    return pg.mouse.get_pos()[1]
+
+def width():
+    return windowWidth
+
+def height():
+    return windowHeight

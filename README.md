@@ -15,6 +15,8 @@
         <h6><b>basic controll</b></h6>
         <li><a>start()</a></li>
         <li><a>createCanvas()</a></li>
+        <li><a>width()</a></li>
+        <li><a>height()</a></li>
         <li><a>update()</a></li>
         <li><a>setTitle()</a></li>
         <li><a>frameCount()</a></li>
@@ -27,6 +29,8 @@
         <li><a>sin()</a></li>
         <li><a>tan()</a></li>
         <li><a>pi</a></li>
+        <li><a>mapping()</a></li>
+        <li><a>random()</a></li>
         <br>
         <h6><b>vector</b></h6>
         <li><a>createVector()</a></li>
@@ -35,5 +39,9 @@
         <li><a>vector.toString()</a></li>
         <li><a>vector.set()</a></li>
         <li><a>vector.copy()</a></li>
+        <br>
+        <h6><b>input</b></h6>
+        <li><a>mouseX()</a></li>
+        <li><a>mouseY()</a></li>
     </ul>
 </h6>
