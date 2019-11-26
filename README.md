@@ -12,7 +12,7 @@
 <h6>
     features:
     <ul>
-        <h6><b>basic controll</b></h6>
+        <h6><b>basic control</b></h6>
         <li><a>start()</a></li>
         <li><a>createCanvas()</a></li>
         <li><a>width()</a></li>
