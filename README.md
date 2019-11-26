@@ -24,7 +24,6 @@
         <li><a>consoleClear()</a></li>
         <br>
         <h6><b>math</b></h6>
-        <li><a>math()</a></li>
         <li><a>cos()</a></li>
         <li><a>sin()</a></li>
         <li><a>tan()</a></li>
