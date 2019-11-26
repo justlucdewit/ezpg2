@@ -1,6 +1,7 @@
 import pygame as pg
+from os import system
 from time import time
-from helpers import ezvector
+from helpers.ezvector import *
 
 pg.init()
 
@@ -45,3 +46,6 @@ def frameRate(fr=None):
     else:
         global frameCap
         frameCap = fr
+
+def consoleClear():
+    system("cls")
