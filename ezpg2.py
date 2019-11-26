@@ -5,13 +5,14 @@ from helpers import ezvector
 pg.init()
 
 canvas = None                   #holds the canvas object
-clock = pg.time.Clock()     #clock object
+clock = pg.time.Clock()         #clock object
 fillcolor = (255, 255, 255)     #holds the drawing fill color
 strokecolor = (0, 0, 0)         #holds the drawing edge color
 launchTime = time()             #holds the timestamp of launch
 frameCountVar = 0               #holds number of passed frames
 xtranslation = 0                #x offset for drawing
 ytranslation = 0                #y offset for drawing
+frameCap = 60                   #capped framerate
 
 def start(setupFunction, drawFunction):
     setupFunction()
@@ -22,7 +23,7 @@ def start(setupFunction, drawFunction):
 def update():
     global frameCountVar
     frameCountVar += 1
-    clock.tick()
+    clock.tick(frameCap)
     for event in pg.event.get():
         if event.type == pg.QUIT:
             exit()
@@ -38,5 +39,9 @@ def setTitle(title):
 def frameCount():
     return frameCountVar
 
-def frameRate():
-    return clock.get_fps()
+def frameRate(fr=None):
+    if fr == None:
+        return clock.get_fps()
+    else:
+        global frameCap
+        frameCap = fr
